@@ -1,0 +1,9 @@
+I use LIKE pattern in two places:
+
+1: I use '%AN%' pattern to search Star's Movie by input names.
+
+Code Fragment: ...where s.first_name like '%" + first + "%' and s.last_name like '%" + last + "%';
+
+2: I use 'ABC%' pattern to get all the movies that start with a given character.
+
+Code Fragment: select id from movies where title like '"+ request.getParameter("tc") +"%';
